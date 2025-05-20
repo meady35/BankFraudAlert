@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Send Webhook</title>
+<title>Send Fraud Alert</title>
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -97,16 +97,16 @@ border: 1px solid #f5c6cb;
 <input type="text" id="webhookUrl" value="https://hooks.us.webexconnect.io/events/PCAQQY14JS" placeholder="https://hooks.us.webexconnect.io/events/PCAQQY14JS" required>
 
 <label for="customerId">Customer ID:</label>
-<input type="text" id="customerId" placeholder="6fd93b9f-9b4d-4c12-b49e-45a3973ce920" required>
+<input type="text" id="customerId" value="6fd93b9f-9b4d-4c12-b49e-45a3973ce920" placeholder="6fd93b9f-9b4d-4c12-b49e-45a3973ce920" required>
 
 <label for="message">Message:</label>
-<textarea id="message" placeholder="We would like to verify a transaction with you. Do you recognize a payment of $1010 to Agent Smith?" required></textarea>
+<textarea id="message" placeholder="We would like to verify a transaction with you. Do you recognize a payment of $1010 to Agent Smith?" required>We would like to verify a transaction with you. Do you recognize a payment of $1010 to Agent Smith?</textarea>
 
 <label for="paymentImageUrl">Payment Image URL (Optional):</label>
-<input type="text" id="paymentImageUrl" placeholder="https://raw.githubusercontent.com/meady35/ChatDemo/refs/heads/main/images/BoACheck.png">
+<input type="text" id="paymentImageUrl" value="https://raw.githubusercontent.com/meady35/ChatDemo/refs/heads/main/images/BoACheck.png" placeholder="https://raw.githubusercontent.com/meady35/ChatDemo/refs/heads/main/images/BoACheck.png">
 
 <label for="context">Context (JSON format, Optional):</label>
-<textarea id="context" placeholder='e.g., {"orderId": "ORD-001", "product": "Premium Service"}'></textarea>
+<textarea id="context" placeholder='e.g., {"orderId": "ORD-001", "product": "Premium Service"}'>{"transactionId": "TXN-98765", "amount": 1010, "vendor": "Agent Smith"}</textarea>
 
 <button type="submit">Send Webhook</button>
 </form>
